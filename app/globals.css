@@ -138,6 +138,25 @@ h1, h2, h3 {
 .botao-destaque { background: var(--rose); width: 100%; max-width: 420px; }
 .botao-destaque:hover { background: var(--rose-forte); }
 
+/* botões de download lado a lado no topo do feed / Início */
+.acoes-topo { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 22px; }
+.acoes-topo .botao-destaque { width: auto; flex: 1 1 280px; max-width: 420px; }
+
+.folha-a4 { position: relative; }
+.folha-a4-menu {
+  position: absolute; top: calc(100% + 6px); left: 0; z-index: 20;
+  min-width: 260px; max-height: 320px; overflow-y: auto;
+  background: var(--branco); border-radius: var(--raio-p);
+  box-shadow: var(--sombra-alta); padding: 6px;
+  display: grid; gap: 2px;
+}
+.folha-a4-item {
+  display: block; padding: 10px 12px; border-radius: 8px;
+  color: var(--tinta); font-size: 14px; font-weight: 600;
+  white-space: nowrap;
+}
+.folha-a4-item:hover { background: var(--fundo-sutil); }
+
 .chip {
   display: inline-flex; align-items: center; gap: 5px;
   padding: 4px 10px; border-radius: 999px;

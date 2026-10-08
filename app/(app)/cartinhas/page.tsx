@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { CARTINHAS, TOTAL_CARTINHAS, TOTAL_PROMETIDO } from "@/lib/config/cartinhas";
+import { TOTAL_LOTES } from "@/lib/data/folha-a4";
 import { AvisoTecnico } from "@/app/_componentes/marca";
 import { BotaoPdfCompleto } from "@/app/_componentes/botao-pdf-completo";
+import { BotaoFolhaA4 } from "@/app/_componentes/botao-folha-a4";
 import { Catalogo, type CartinhaResumo } from "./catalogo";
 
 export const metadata: Metadata = { title: "Cartinhas" };
@@ -29,8 +31,9 @@ export default function PaginaCartinhas() {
         </p>
       </header>
 
-      <div style={{ margin: "16px 0 22px" }}>
+      <div className="acoes-topo">
         <BotaoPdfCompleto />
+        <BotaoFolhaA4 totalLotes={TOTAL_LOTES} />
       </div>
 
       {/* useSearchParams exige Suspense: sem ele o build falha na pré-renderização. */}

@@ -8,6 +8,8 @@ import { MATERIAIS } from "@/lib/config/materiais";
 import { urlCartinha } from "@/lib/urls";
 import { AvisoTecnico } from "@/app/_componentes/marca";
 import { BotaoPdfCompleto } from "@/app/_componentes/botao-pdf-completo";
+import { BotaoFolhaA4 } from "@/app/_componentes/botao-folha-a4";
+import { TOTAL_LOTES } from "@/lib/data/folha-a4";
 
 export const metadata: Metadata = { title: "Início" };
 
@@ -41,8 +43,9 @@ export default async function Inicio() {
         </p>
       </section>
 
-      <div style={{ marginTop: 20 }}>
+      <div className="acoes-topo" style={{ marginTop: 20 }}>
         <BotaoPdfCompleto />
+        <BotaoFolhaA4 totalLotes={TOTAL_LOTES} />
       </div>
 
       <div className="secao-titulo">
